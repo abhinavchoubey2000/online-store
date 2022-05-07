@@ -1,635 +1,323 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To My Store</title>
-    <link rel="shortcut icon" href="./images/icons/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <div class="search-box">
-            <input type="text" name="search" id="search">
-            <button onclick="s">
-                <img src="./images/icons/search.svg" alt="Search Logo">
-            </button>
-        </div>
-        <div class="nav-content">
-            <span class="span-content">
-                <p>Hello, Sign In</p>
-                <p class="sub-para">Your Account</p>
-            </span>
-            <span class="span-content">
-                <p>My Cart</p>
-                <p class="sub-para">$0.00</p>
-            </span>
-        </div>
-    </nav>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.nav-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 9vh;
+    background-color: #373a48;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+.search-box{
+    font-size: 2rem;
+    display: flex;
+}
+input{
+    font-size: 1.5rem;
+    padding: 5px;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+.search-box button{
+    padding-top: 6px;
+    width: 40px;
+    height: 40px;
+    background-color: #fd7331;
+    border: none;
+    cursor: pointer;
+}
+.search-box img{
+    width: 25px;
+}
+.nav-content{
+    margin-left: 2rem;
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+.span-content{
+    margin-right: 2rem;
+    cursor: pointer;
+}
+.sub-para{
+    opacity: 0.6;
+}
+.all-content{
+    margin: 10px;
+}
+.content-heading{
+    display: flex;
+    align-items: center;
+}
+.content-heading h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
+}
+.content-heading span{
+    position: absolute;
+    right: 0;
+    margin-right:10px ;
+    color: #fd7331;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+.content{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item{
+    margin: 5px;
+}
+.item-image{
+    height: 15rem;
+    width: 14rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.price{
+    color: #fd7331;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.item-name{
+    display: flex;
+    flex-direction: column;
+    width: 13.5rem;
+    height: 13rem;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+.category{
+    margin-top: 5px;
+    opacity: 0.6;
+}
+.banner-1{
+    margin: 10px;
+    height: 66vh;
+    width: 97.5vw;
+    background-image: url("./images/banners/banner1.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    margin-bottom: 10px;
+}
+.banner-2{
+    display: flex;
+}
+.banner-2 .banner{
+    margin: 5px;
+    height: 12rem;
+    width: 50rem;
+    margin-bottom: 25px;
+}
+#banner-2-1{
+    background-image: url("./images/banners/banner2-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#banner-2-2{
+    background-image: url("./images/banners/banner2-2.jpg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-3{
+    display: flex;
+    margin-bottom: 25px;
+}
+.banner-3 .banner{
+    margin: 5px;
+    height: 21rem;
+    width: 30rem;
+}
+#banner-3-1{
+    background-image: url("./images/banners/banner-3-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#banner-3-2{
+    background-image: url("./images/banners/banner-3-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#banner-3-3{
+    background-image: url("./images/banners/banner-3-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#banner-3-4{
+    background-image: url("./images/banners/banner-3-4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner-4{
+    display: flex;
+    margin-bottom: 25px;
+}
+.banner-4 .banner{
+    margin: 5px;
+    height: 12rem;
+    width: 50rem;
+}
+#banner-4-1{
+    background-image: url("./images/banners/banner-4-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#banner-4-2{
+    background-image: url("./images/banners/banner4-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bg{
+    background-color: #37393a;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.footer{
+    margin: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+.footer h3{
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    color: white;
+}
+.footer-content{
+    margin: 25px;
+    color: white;
+    
+}
+.footer-content p{
+    margin-top: 20px;
+    opacity: 0.6;
+    font-family: 'Poppins', sans-serif;
+}
+#aboutCompany{
+    width: 40vw;
+}
+.footer-icons{
+    display: flex;
+    margin-top: 25px;
+}
+.footer-icons span{
+    opacity: 0.6;
+    font-family: 'Poppins', sans-serif;
+}
+.icons{
+    display: flex;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.icon img{
+    height: 25px;
+}
+.all-rights-reserved{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    opacity: 0.6;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
 
-<!-- Banner-1 -->
-    <div class="banner-1"></div>
+.frame-2{
+    display: flex;
+}
+/* Responsive */
+@media(max-width:480px){
+    .search-box{
+        font-size: 0.5rem;
+        display: flex;
+    }
+    input{
+        font-size: 1rem;
+        margin-left: 10px;
+    }
+    .search-box button{
+        margin-right: 150px;
+    }
+    .nav-content{
+        margin-left: 0rem;
+        font-size: xx-small;
+        display: flex;
+        position: absolute;
+        right: 0;
+    }
+    .span-content{
+        margin-right: 1rem;
+    }
+    .banner-1{
+        height: 15vh;
+        width: 95vw;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    h1{
+        font-size: medium;
+    }
+    .item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    <div class="all-content">
-
-<!-- Deal Of The Day -->
-        <div class="deal-of-the-day">
-            <div class="content-heading">
-                <h1>Deal of the Day</h1>
-                <span>VIEW ALL</span>
-            </div>
-            <div class="content">
-                <div class="item">
-                    <img src="./images/item-images/deal-of-the-day/boat-earbuds.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs1,099                            
-                        </span>
-                        <span class="name">
-                            boAt Airdopes 121v2 True Wireless Earbuds with Upto 14 Hours Playback
-                        </span>
-                        <span class="category">
-                            Deal of the day
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/deal-of-the-day/headphones.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs649
-                        </span>
-                        <span class="name">
-                            boAt Bassheads 900 Wired On Ear Headphones with Mic (Carbon Black)
-                        </span>
-                        <span class="category">
-                            Deal of the day
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/deal-of-the-day/grinder.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs1,857
-                        </span>
-                        <span class="name">
-                            Butterfly Hero Mixer Grinder, 500W, 3 Jars (Grey)
-                        </span>
-                        <span class="category">
-                            Deal of the day
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/deal-of-the-day/phone-stand.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs129
-                        </span>
-                        <span class="name">
-                            Portronics MODESK POR-122 Universal Mobile Holder (Black)
-                        </span>
-                        <span class="category">
-                            Deal of the day
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/deal-of-the-day/laptop-bag.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs475
-                        </span>
-                        <span class="name">
-                            ADISA Light Weight Laptop Backpack 32 Ltrs
-                        </span>
-                        <span class="category">
-                            Deal of the day
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- Banner-2 -->
-        <div class="banner-2">
-            <div id="banner-2-1" class="banner"></div>
-            <div id="banner-2-2" class="banner"></div>
-        </div>
-
-<!-- Best Selling -->
-        <div class="best-selling">
-            <div class="content-heading">
-                <h1>Best Selling</h1>
-                <span>VIEW ALL</span>
-            </div>
-            <div class="content">
-                <div class="item">
-                    <img src="./images/item-images/best-selling/back-cover.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs209                            
-                        </span>
-                        <span class="name">
-                            RK Seller Back Cover for Samsung Galaxy A73 5g Shockproof Hybrid TPU Carbon Fiber Flexible Back Case-(Black)
-                        </span>
-                        <span class="category">
-                            Best Seller
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-selling/bottles.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs280
-                        </span>
-                        <span class="name">
-                            kusum seller Plastic Fridge/Water Bottle 1 Litre Minerva, Multicolor 12pcs.
-                        </span>
-                        <span class="category">
-                            Best Seller
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-selling/hand-mixer.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs1,760
-                        </span>
-                        <span class="name">
-                            Philips HR3705/10 300-Watt Hand Mixer, Black
-                        </span>
-                        <span class="category">
-                            Best Seller
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-selling/ro.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs24,299
-                        </span>
-                        <span class="name">
-                            AO Smith Z9 Hot+ normal RO |10 L|100%RO+SCMT(Silver Charged Membrane
-                        </span>
-                        <span class="category">
-                            Best Seller
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-selling/shoes.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs850
-                        </span>
-                        <span class="name">
-                            BEST SELLER Men White and Black Leather Sneakers
-                        </span>
-                        <span class="category">
-                            Best Seller
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- Banner-3 -->
-        <div class="banner-3">
-            <div id="banner-3-1" class="banner"></div>
-            <div id="banner-3-2" class="banner"></div>
-            <div id="banner-3-3" class="banner"></div>
-            <div id="banner-3-4" class="banner"></div>
-        </div>
-
-<!-- New Arrival -->
-        <div class="new-arrival">
-            <div class="content-heading">
-                <h1>New Arrival</h1>
-                <span>VIEW ALL</span>
-            </div>
-            <div class="content">
-                <div class="item">
-                    <img src="./images/item-images/new-arrival/buddha.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs299                           
-                        </span>
-                        <span class="name">
-                            Alaukik Polyresin Palm Buddha with Golden Polish
-                        </span>
-                        <span class="category">
-                            New Arrival
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/new-arrival/mobile-phone.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs299
-                        </span>
-                        <span class="name">
-                            A-Allin1 Premium Luxury D+ Sensitive Touching Edge to Edge
-                        </span>
-                        <span class="category">
-                            New Arrival
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/new-arrival/ganesha.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs499
-                        </span>
-                        <span class="name">
-                            Alaukik Polyresin Attractive Doctor Ganesha with Mushak
-                        </span>
-                        <span class="category">
-                            New Arrival
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/new-arrival/poster-frame.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs399
-                        </span>
-                        <span class="name">
-                            Motivational Poster with Framed
-                        </span>
-                        <span class="category">
-                            New Arrival
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/new-arrival/watches.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs549
-                        </span>
-                        <span class="name">
-                            Multicolor Rubber Strap Analog Watch for Boys & Men-1128
-                        </span>
-                        <span class="category">
-                            New Arrival
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- Banner-4 -->
-        <div class="banner-4">
-            <div id="banner-4-1" class="banner"></div>
-            <div id="banner-4-2" class="banner"></div>
-        </div>
-
-<!-- Best Camera Phones -->
-        <div class="best-camera-phones">
-            <div class="content-heading">
-                <h1>Best Camera Phones</h1>
-                <span>VIEW ALL</span>
-            </div>
-            <div class="content">
-                <div class="item">
-                    <img src="./images/item-images/best-camera-phones/one-plus.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs23,999                           
-                        </span>
-                        <span class="name">
-                            OnePlus Nord CE 2 5G (Bahamas Blue, 6GB RAM, 128GB Storage)
-                        </span>
-                        <span class="category">
-                            Best Camera Phones
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-camera-phones/redmi-note.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs13,999
-                        </span>
-                        <span class="name">
-                            Redmi Note 10S (Deep Sea Blue, 6GB RAM, 64GB Storage) -Super Amoled Display | 33W Charger Included
-                        </span>
-                        <span class="category">
-                            Best Camera Phones
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-camera-phones/samsung-m32.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs13,999
-                        </span>
-                        <span class="name">
-                            Samsung Galaxy M32 (Black, 6GB RAM, 128GB Storage) 6 Months Free Screen Replacement for Prime
-                        </span>
-                        <span class="category">
-                            Best Camera Phones
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-camera-phones/xiaomi.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs66,999
-                        </span>
-                        <span class="name">
-                            Xiaomi 12 Pro | 5G (Noir Black, 12GB RAM, 256GB Storage)| 50MP+50MP+50MP Flagship Cameras(OIS)
-                        </span>
-                        <span class="category">
-                            Best Camera Phones
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-camera-phones/samsung-m53.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs28,499
-                        </span>
-                        <span class="name">
-                            Samsung Galaxy M53 5G (Mystique Green, 8GB, 128GB Storage) | Travel Adapter to be Purchased Separately
-                        </span>
-                        <span class="category">
-                            Best Camera Phones
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- Banner-5 -->
-        <div class="banner-3">
-            <div id="banner-3-1" class="banner"></div>
-            <div id="banner-3-2" class="banner"></div>
-            <div id="banner-3-3" class="banner"></div>
-            <div id="banner-3-4" class="banner"></div>
-        </div>
-
-<!-- Fashion Accessories -->
-        <div class="fashion-accessories">
-            <div class="content-heading">
-                <h1>Fashion Accessories</h1>
-                <span>VIEW ALL</span>
-            </div>
-            <div class="content">
-                <div class="item">
-                    <img src="./images/item-images/fashion-accessories/band.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs229                        
-                        </span>
-                        <span class="name">
-                            Tantalizing Gold Plated Necklace
-                        </span>
-                        <span class="category">
-                            Fashion Accessories
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/fashion-accessories/hair-clip.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs299
-                        </span>
-                        <span class="name">
-                            Jewellery Design Gold palted Studded Clip Hair Accessories for womens
-                        </span>
-                        <span class="category">
-                            Fashion Accessories
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/fashion-accessories/hand-bag.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs459
-                        </span>
-                        <span class="name">
-                            Men's and Women's Oxford Cloth Elastic Arm Bag (Blue)
-                        </span>
-                        <span class="category">
-                            Fashion Accessories
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/fashion-accessories/pendant.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs248
-                        </span>
-                        <span class="name">
-                            Jewellery Pendent for Girls with Long Chain Pendant Necklace For womens
-                        </span>
-                        <span class="category">
-                            Fashion Accessories
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/fashion-accessories/sling-bag.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs399
-                        </span>
-                        <span class="name">
-                            Latest Cross Body Sling Bag for Girls/Women Sling bag for
-                        </span>
-                        <span class="category">
-                            Fashion Accessories
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<!-- Best Recommendation -->
-        <div class="best-recommendation">
-            <div class="content-heading">
-                <h1>Best Recommendation</h1>
-                <span>VIEW ALL</span>
-            </div>
-            <div class="content">
-                <div class="item">
-                    <img src="./images/item-images/best-recommendation/headphones.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs649                     
-                        </span>
-                        <span class="name">
-                            boAt Bassheads 900 Wired On Ear Headphones with Mic (Carbon Black)
-                        </span>
-                        <span class="category">
-                            Best Recommended
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-recommendation/pendant.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs248
-                        </span>
-                        <span class="name">
-                            Jewellery Pendent for Girls with Long Chain Pendant Necklace For womens
-                        </span>
-                        <span class="category">
-                            Best Recommended
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-recommendation/poster-frame.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs399
-                        </span>
-                        <span class="name">
-                            Motivational Poster with Framed
-                        </span>
-                        <span class="category">
-                            Best Recommended
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-recommendation/ro.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs24,299
-                        </span>
-                        <span class="name">
-                            AO Smith Z9 Hot+ normal RO |10 L|100%RO+SCMT(Silver Charged Membrane
-                        </span>
-                        <span class="category">
-                            Best Recommended
-                        </span>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="./images/item-images/best-recommendation/xiaomi.jpg" alt="Item Image" class="item-image">
-                    <div class="item-name">
-                        <span class="price">
-                            Rs66,999
-                        </span>
-                        <span class="name">
-                            Xiaomi 12 Pro | 5G (Noir Black, 12GB RAM, 256GB Storage)| 50MP+50MP+50MP Flagship Cameras(OIS)
-                        </span>
-                        <span class="category">
-                            Best Recommended
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<!-- Footer -->
-    <div class="bg">
-        <div class="footer">
-            <div class="frame-1">
-                <div id="aboutCompany" class="about-comapny">
-                    <div class="footer-content">
-                        <h3>What are we about</h3>
-                        <div class="para">
-                            <p>
-                                Our company is guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking. We strive to be Earth’s most customer-centric company, Earth’s best employer, and Earth’s safest place to work.
-                            </p>
-                            <div class="footer-icons">
-                                <span>Follow Us On: </span>
-                                <div class="icons">
-                                    <div class="icon">
-                                        <img src="./images/icons/instagram.svg" alt="">
-                                    </div>
-                                    <div class="icon">
-                                        <img src="./images/icons/facebook.svg" alt="">
-                                    </div>
-                                    <div class="icon">
-                                        <img src="./images/icons/gmail.svg" alt="">
-                                    </div>
-                                    <div class="icon">
-                                        <img src="./images/icons/twitter.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="frame-2">
-                <div class="more-info">
-                    <div class="footer-content">
-                        <h3>More Info</h3>
-                        <div class="para">
-                            <p>Terms & Conditions</p>
-                            <p>Return Policy</p>
-                            <p>Shipping Info</p>
-                            <p>Carrers</p>
-                            <p>Wholesale</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="company">
-                    <div class="footer-content">
-                        <h3>Company</h3>
-                        <div class="para">
-                            <p>FAQs</p>
-                            <p>Privacy</p>
-                            <p>Terms</p>
-                            <p>Shipping</p>
-                            <p>Secure Shopping</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-us">
-                    <div class="footer-content">
-                        <h3>About Us</h3>
-                        <div class="para">
-                            <p>Our Showroom</p>
-                            <p>Read The Journal</p>
-                            <p>Press Information</p>
-                            <p>Carrers</p>
-                            <p>Events</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="help">
-                    <div class="footer-content">
-                        <h3>Help</h3>
-                        <div class="para">
-                            <p>Store Info</p>
-                            <p>Delivery</p>
-                            <p>Returns</p>
-                            <p>Furniture Care</p>
-                            <p>Fabric Gude</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-            <hr>
-            <div class="all-rights-reserved">
-                <span>Hardy is &copy; 2022 All Rights Reserved</span>
-            </div>
-    </div>
-</body>
-</html>
+    }
+    .item-image{
+        height: 13rem;
+        width: 12rem;
+    }
+    .item-name{
+        width: 20rem;
+        height: 13rem;
+    }
+    .banner-2 .banner{
+        height: 3rem;
+        width: 50rem;
+    }
+    .banner-3 .banner{
+        height: 5rem;
+        width: 20rem;
+    }
+    .banner-4 .banner{
+        height: 4rem;
+        width: 50rem;
+    }
+    .footer{
+        display: block;
+        margin: auto;
+    }
+    #aboutCompany{
+        width: 100vw;
+    }
+    .footer-content{
+        margin: 10px;   
+        font-size: xx-small;
+    }
+    .all-rights-reserved{
+        font-size: x-small;
+    }
+}
