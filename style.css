@@ -320,4 +320,7 @@ input:focus{
     .all-rights-reserved{
         font-size: x-small;
     }
+    .footer h3{
+        margin-bottom: 10px;
+    }
 }
